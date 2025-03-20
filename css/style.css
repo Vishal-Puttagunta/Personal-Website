@@ -1841,11 +1841,6 @@ textarea.form-control {
 .was-validated .custom-file-input:valid ~ .custom-file-label, .custom-file-input.is-valid ~ .custom-file-label {
   border-color: #28a745; }
 
-.was-validated .custom-file-input:valid ~ .valid-feedback,
-.was-validated .custom-file-input:valid ~ .valid-tooltip, .custom-file-input.is-valid ~ .valid-feedback,
-.custom-file-input.is-valid ~ .valid-tooltip {
-  display: block; }
-
 .was-validated .custom-file-input:valid:focus ~ .custom-file-label, .custom-file-input.is-valid:focus ~ .custom-file-label {
   border-color: #28a745;
   -webkit-box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25);
@@ -4391,15 +4386,11 @@ input[type="button"].btn-block {
   padding-left: 0;
   margin-bottom: 0; }
 
-.list-group-item-action {
-  width: 100%;
+.list-group-item-action:hover, .list-group-item-action:focus {
+  z-index: 1;
   color: #495057;
-  text-align: inherit; }
-  .list-group-item-action:hover, .list-group-item-action:focus {
-    z-index: 1;
-    color: #495057;
-    text-decoration: none;
-    background-color: #f8f9fa; }
+  text-decoration: none;
+  background-color: #f8f9fa; }
   .list-group-item-action:active {
     color: #212529;
     background-color: #e9ecef; }
@@ -7107,20 +7098,6 @@ button.bg-dark:focus {
   .mb-sm-n4,
   .my-sm-n4 {
     margin-bottom: -1.5rem !important; }
-  .ml-sm-n4,
-  .mx-sm-n4 {
-    margin-left: -1.5rem !important; }
-  .m-sm-n5 {
-    margin: -3rem !important; }
-  .mt-sm-n5,
-  .my-sm-n5 {
-    margin-top: -3rem !important; }
-  .mr-sm-n5,
-  .mx-sm-n5 {
-    margin-right: -3rem !important; }
-  .mb-sm-n5,
-  .my-sm-n5 {
-    margin-bottom: -3rem !important; }
   .ml-sm-n5,
   .mx-sm-n5 {
     margin-left: -3rem !important; }
@@ -9080,6 +9057,53 @@ textarea.form-control {
     .ftco-section {
       padding: 6em 0; } }
 
+/* Skill Cards Styling */
+.skill-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    padding: 2rem;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    border-color: rgba(255, 255, 255, 0.4);
+}
+
+.skill-card .icon {
+    color: #ffbd39;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.skill-card h3 {
+    color: white;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.skill-card ul li {
+    color: white;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 767.98px) {
+  .ftco-section {
+    padding: 6em 0;
+  }
+}
+
 .ftco-no-pt {
   padding-top: 0 !important; }
 
@@ -9479,7 +9503,8 @@ textarea.form-control {
   color: #fff;
   letter-spacing: .1em; }
   .post-info > div {
-    display: inline-block; }
+    display: inline-block;
+    margin-right: 10px; }
     .post-info > div .seperator {
       display: inline-block;
       margin: 0 10px;
