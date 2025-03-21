@@ -23,6 +23,72 @@
     <link rel="stylesheet" href="css/style.css">
     <style>
       /* Removing all custom skill card styles */
+      /* Contact section styling */
+      .contact-info .align-self-stretch {
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 15px;
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+        min-height: 120px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .contact-info .align-self-stretch::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          rgba(255, 255, 255, 0.1),
+          transparent
+        );
+        transition: 0.5s;
+      }
+
+      .contact-info .align-self-stretch:hover::before {
+        left: 100%;
+      }
+
+      .contact-info .align-self-stretch:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        border-color: rgba(255, 255, 255, 0.2);
+      }
+
+      .contact-info h3 {
+        font-size: 1rem;
+        color: #F96D00;
+        margin-bottom: 0.8rem;
+        font-weight: 600;
+      }
+
+      .contact-info p {
+        font-size: 0.75rem;
+        margin: 0;
+        word-break: break-all;
+        white-space: normal;
+      }
+
+      .contact-info a {
+        color: #fff;
+        text-decoration: none;
+        transition: color 0.3s ease;
+        display: inline-block;
+        width: 100%;
+        text-align: center;
+      }
+
+      .contact-info a:hover {
+        color: #F96D00;
+      }
     </style>
   </head>
   <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
@@ -253,39 +319,27 @@
 
         <div class="row d-flex contact-info mb-5">
           <div class="col-md-6 col-lg-3 d-flex ftco-animate">
-          	<div class="align-self-stretch box p-4 text-center">
-          		<div class="icon d-flex align-items-center justify-content-center">
-          			<span class="icon-map-signs"></span>
-          		</div>
+          	<div class="align-self-stretch p-4 text-center">
           		<h3 class="mb-4">LinkedIn</h3>
-	            <p>Vishal Puttagunta</p>
+	            <p><a href="https://linkedin.com/in/vishal-puttagunta" target="_blank">Vishal Puttagunta</a></p>
 	          </div>
           </div>
           <div class="col-md-6 col-lg-3 d-flex ftco-animate">
-          	<div class="align-self-stretch box p-4 text-center">
-          		<div class="icon d-flex align-items-center justify-content-center">
-          			<span class="icon-phone2"></span>
-          		</div>
+          	<div class="align-self-stretch p-4 text-center">
           		<h3 class="mb-4">Contact Number</h3>
 	            <p><a href="tel://6148154099">(614) 815-4099</a></p>
 	          </div>
           </div>
           <div class="col-md-6 col-lg-3 d-flex ftco-animate">
-          	<div class="align-self-stretch box p-4 text-center">
-          		<div class="icon d-flex align-items-center justify-content-center">
-          			<span class="icon-paper-plane"></span>
-          		</div>
+          	<div class="align-self-stretch p-4 text-center">
           		<h3 class="mb-4">Email Address</h3>
 	            <p><a href="mailto:vishal.s.puttagunta@outlook.com">vishal.s.puttagunta@outlook.com</a></p>
 	          </div>
           </div>
           <div class="col-md-6 col-lg-3 d-flex ftco-animate">
-          	<div class="align-self-stretch box p-4 text-center">
-          		<div class="icon d-flex align-items-center justify-content-center">
-          			<span class="icon-globe"></span>
-          		</div>
+          	<div class="align-self-stretch p-4 text-center">
           		<h3 class="mb-4">Website</h3>
-	            <p><a href="#">vishalputtagunta.com</a></p>
+	            <p><a href="https://vishalputtagunta.com">vishalputtagunta.com</a></p>
 	          </div>
           </div>
         </div>
